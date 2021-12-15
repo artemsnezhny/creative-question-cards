@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreativeQuestionCards.Bots.Web", "src\CreativeQuestionCards.Bots.Web\CreativeQuestionCards.Bots.Web.csproj", "{FCB42AFF-CA4D-4AE3-911E-C3ADD61DC07F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreativeQuestionCards.Bots.Core", "src\CreativeQuestionCards.Bots.Core\CreativeQuestionCards.Bots.Core.csproj", "{D59F5A0F-FE13-47C8-9A49-CE6A386B316F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreativeQuestionCards.Bots.Infrastructure.Telegram", "src\CreativeQuestionCards.Bots.Infrastructure.Telegram\CreativeQuestionCards.Bots.Infrastructure.Telegram.csproj", "{5BC3E010-77B2-4937-8F73-08FE294C1640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreativeQuestionCards.Bots.BackgroundServices", "src\CreativeQuestionCards.Bots.BackgroundServices\CreativeQuestionCards.Bots.BackgroundServices.csproj", "{9A2A2F43-1122-4FC0-99F6-4FD30052A12A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreativeQuestionCards.Bots.BackgroundServices", "src\CreativeQuestionCards.Bots.BackgroundServices\CreativeQuestionCards.Bots.BackgroundServices.csproj", "{9A2A2F43-1122-4FC0-99F6-4FD30052A12A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FCB42AFF-CA4D-4AE3-911E-C3ADD61DC07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCB42AFF-CA4D-4AE3-911E-C3ADD61DC07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCB42AFF-CA4D-4AE3-911E-C3ADD61DC07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCB42AFF-CA4D-4AE3-911E-C3ADD61DC07F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D59F5A0F-FE13-47C8-9A49-CE6A386B316F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D59F5A0F-FE13-47C8-9A49-CE6A386B316F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D59F5A0F-FE13-47C8-9A49-CE6A386B316F}.Release|Any CPU.ActiveCfg = Release|Any CPU
