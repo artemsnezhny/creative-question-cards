@@ -4,8 +4,22 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
+	<ItemGroup>
+	  <Content Remove="Questions\NewYearQuestions.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="Questions\NewYearQuestions.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\CreativeQuestionCards.Bots.Core\CreativeQuestionCards.Bots.Core.csproj" />
+	  <ProjectReference Include="..\CreativeQuestionCards.Bots.DataAccess\CreativeQuestionCards.Bots.DataAccess.csproj" />
+	  <ProjectReference Include="..\CreativeQuestionCards.Bots.Infrastructure.Telegram\CreativeQuestionCards.Bots.Infrastructure.Telegram.csproj" />
 	</ItemGroup>
 </Project>

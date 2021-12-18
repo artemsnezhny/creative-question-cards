@@ -133,7 +133,7 @@
         <Rule Id="SA1410"  Action="Warning" />          <!-- Remove delegate parenthesis when possible -->
         <Rule Id="SA1411"  Action="Warning" />          <!-- Attribute constructor should not use unnecessary parenthesis -->
         <Rule Id="SA1412"  Action="None"    />          <!-- Store files as UTF-8 with byte order mark -->
-        <Rule Id="SA1413"  Action="Warning" />          <!-- Use trailing comma in multi-line initializers -->
+        <Rule Id="SA1413"  Action="None" />          <!-- Use trailing comma in multi-line initializers -->
     </Rules>
 	
     <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers.LayoutRules">
@@ -161,7 +161,7 @@
     </Rules>
 	
     <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers.DocumentationRules">
-        <Rule Id="SA1600"  Action="Warning" />          <!-- Elements should be documented -->
+        <Rule Id="SA1600"  Action="None" />             <!-- Elements should be documented -->
         <Rule Id="SA1601"  Action="Warning" />          <!-- Partial elements should be documented -->
         <Rule Id="SA1602"  Action="Warning" />          <!-- Enumeration items should be documented -->
         <Rule Id="SA1603"  Action="None" />             <!-- Documentation should contain valid XML -->

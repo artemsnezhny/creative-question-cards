@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
-		<NoWarn>$(NoWarn)</NoWarn>
+		<NoWarn>$(NoWarn),1591</NoWarn>
 		<CodeAnalySisRuleSet>../../settings/StyleCopAnalyzers.ruleset</CodeAnalySisRuleSet>
   </PropertyGroup>
 
