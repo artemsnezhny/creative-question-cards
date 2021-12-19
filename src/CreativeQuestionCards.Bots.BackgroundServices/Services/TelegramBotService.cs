@@ -4,10 +4,15 @@
 
     internal sealed class TelegramBotService : BackgroundService
     {
+        private readonly ILogger<TelegramBotService> logger;
+
         private readonly ITelegramBot telegramBot;
 
-        public TelegramBotService(ITelegramBot telegramBot)
+        public TelegramBotService(
+            ILogger<TelegramBotService> logger,
+            ITelegramBot telegramBot)
         {
+            this.logger = logger;
             this.telegramBot = telegramBot;
         }
 
@@ -19,7 +24,7 @@
             }
             catch (Exception e)
             {
-                // TODO: log exception
+                this.logger.LogError($"TelegramBotService failed to start: {e}");
                 throw;
             }
 

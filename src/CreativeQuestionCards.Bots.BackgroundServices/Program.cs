@@ -3,7 +3,10 @@ using CreativeQuestionCards.Bots.DataAccess.Extensions;
 using CreativeQuestionCards.Bots.Infrastructure.Telegram.Extensions;
 using CreativeQuestionCards.Bots.Infrastructure.Telegram.Settings;
 
-var builder = Host.CreateDefaultBuilder(args);
+using Serilog;
+
+var builder = Host.CreateDefaultBuilder(args)
+    .UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 
 builder.ConfigureServices((context, services) =>
     {

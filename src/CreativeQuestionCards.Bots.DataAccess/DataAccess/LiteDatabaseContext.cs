@@ -9,7 +9,7 @@
         public LiteDatabaseContext(string fileName)
         {
             var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
-            this.Database = new LiteDatabase(Path.Combine(basePath, fileName));
+            this.Database = new LiteDatabase($"Filename={Path.Combine(basePath, fileName)};connection=shared");
         }
 
         public LiteDatabase Database { get; }
