@@ -1,5 +1,6 @@
 using CreativeQuestionCards.Bots.BackgroundServices.Extensions;
 using CreativeQuestionCards.Bots.DataAccess.Extensions;
+using CreativeQuestionCards.Bots.DataAccess.Settings;
 using CreativeQuestionCards.Bots.Infrastructure.Telegram.Extensions;
 using CreativeQuestionCards.Bots.Infrastructure.Telegram.Settings;
 
@@ -12,6 +13,10 @@ builder.ConfigureServices((context, services) =>
     {
         services.AddOptions<TelegramSettings>()
             .Bind(context.Configuration.GetSection(TelegramSettings.SectionKey))
+            .ValidateOnStart();
+
+        services.AddOptions<LiteDatabaseSettings>()
+            .Bind(context.Configuration.GetSection(LiteDatabaseSettings.SectionKey))
             .ValidateOnStart();
 
         services.AddBackgroundServices();

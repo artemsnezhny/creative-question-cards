@@ -1,5 +1,6 @@
 ﻿namespace CreativeQuestionCards.Bots.BackgroundServices.Providers
 {
+    using System.Reflection;
     using System.Text.Json;
 
     using CreativeQuestionCards.Bots.Core.Providers;
@@ -10,7 +11,9 @@
 
         static QuestionsProvider()
         {
-            var json = File.ReadAllText(".\\Questions\\NewYearQuestions.json");
+            var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
+            var filePath = Path.Combine(basePath, "Questions", "NewYearQuestions.json");
+            var json = File.ReadAllText(filePath);
             Questions = JsonSerializer.Deserialize<Dictionary<int, string>>(json)
                 ?? new Dictionary<int, string>();
         }

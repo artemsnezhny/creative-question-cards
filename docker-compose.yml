@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  creativequestioncards:
+    image: creativequestioncards:0.3.0
+    build:
+      context: .
+      dockerfile: src/CreativeQuestionCards.Bots.BackgroundServices/Dockerfile
+    volumes:
+      - /home/Logs:/home/Logs
+      - /home/Database:/home/Database

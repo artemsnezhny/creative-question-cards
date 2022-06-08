@@ -293,6 +293,13 @@
 
                     return;
                 }
+
+                await botClient.SendTextMessageAsync(
+                        update.Message.Chat.Id,
+                        "Упс! Я бы рад поболтать, но пока умею только предлагать вопросы 🙌",
+                        replyMarkup: new InlineKeyboardMarkup(
+                            InlineKeyboardButton.WithCallbackData("Хочу вопрос!", "/newquestion")),
+                        cancellationToken: cancellationToken);
             }
         }
 
@@ -339,13 +346,18 @@
             {
                 await botClient.SendTextMessageAsync(
                     chatId,
-                    $"Поздравляем, ты прошёл игру и осилил все 100 вопросов, ура! Надеемся, ты узнал о себе что-то новое 🖤 Подари себе в честь этого что-нибудь приятное 💌{Environment.NewLine}{Environment.NewLine}Спасибо, что был с нами ✨",
+                    $"Поздравляем, ты прошёл игру и осилил все 100 вопросов, ура! Надеемся, ты узнал о себе что-то новое 🖤 Подари себе в честь этого что-нибудь приятное 💌{Environment.NewLine}{Environment.NewLine}Будем рады твоим озарениям и впечатлениям в директе",
                     replyMarkup: new InlineKeyboardMarkup(
                     new[]
                     {
                         InlineKeyboardButton.WithUrl("meriva_stilllife", "https://www.instagram.com/meriva_stilllife/"),
                         InlineKeyboardButton.WithUrl("limonnaya", "https://www.instagram.com/limonnaya/"),
                     }),
+                    cancellationToken: cancellationToken);
+
+                await botClient.SendTextMessageAsync(
+                    chatId,
+                    "Спасибо, что был с нами ✨",
                     cancellationToken: cancellationToken);
 
                 return;

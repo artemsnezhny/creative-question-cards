@@ -1,15 +1,12 @@
 ﻿namespace CreativeQuestionCards.Bots.DataAccess.DataAccess
 {
-    using System.Reflection;
-
     using LiteDB;
 
     internal sealed class LiteDatabaseContext : ILiteDatabaseContext
     {
         public LiteDatabaseContext(string fileName)
         {
-            var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
-            this.Database = new LiteDatabase($"Filename={Path.Combine(basePath, fileName)};connection=shared");
+            this.Database = new LiteDatabase($"Filename={fileName};connection=shared");
         }
 
         public LiteDatabase Database { get; }
